@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/individual',SettingController::class)->name('individual');
+Route::get('/organization',SettingController::class)->name('organization');
